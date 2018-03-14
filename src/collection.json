@@ -1,0 +1,9 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "nova-template": {
+      "description": "A blank schematic.",
+      "factory": "./nova-template/index#novaTemplate"
+    }
+  }
+}

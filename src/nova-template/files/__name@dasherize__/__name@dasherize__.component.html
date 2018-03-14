@@ -1,0 +1,14 @@
+<div id="page-{{ id }}" class="page page-<%= dasherize(name) %>">
+    <nova-bg [data]="data"></nova-bg>
+    <div class="scrollbar-holder">
+      <div class="scroller">
+        <nova-mobile-img [mediaId]="data.background_media" class="show-for-small-only left"></nova-mobile-img>
+        <div class="bg animated fadeInUp clear" [style.background-color]="getColor(data['box_color'])" [hidden]="!data.text && !data.header && !data.subHeader && !data.label">
+          <nova-title [data]="data"></nova-title>
+          <nova-text-element class="con" [data]="data.text" [myid]="data._id" (openGallery)="gallery.openSlider($event)"></nova-text-element>
+          <nova-content-links class="content-links" *ngIf="data.links && data.links.length > 0" [floors]="data.links"></nova-content-links>
+        </div>
+      </div>
+    </div>
+    <nova-text-gallery #gallery [medias]="data.textImages" [myid]="data._id"></nova-text-gallery>
+  </div>
