@@ -1,9 +1,14 @@
 {
-  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "$schema":
+    "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
-    "nova-template": {
+    "page": {
       "description": "A blank schematic.",
-      "factory": "./nova-template/index#novaTemplate"
+      "factory": "./page/index#page"
+    },
+    "content": {
+      "description": "A blank schematic.",
+      "factory": "./content/index#content"
     }
   }
 }
